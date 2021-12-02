@@ -6,7 +6,7 @@ access_token = var.access_token
 
 resource "google_spanner_instance" "example" {
   config       = "nam3"
-  display_name = "us-dev-abcd-fghi_spanner2-instance"
+  name = "us-dev-abcd-fghi_spanner2-instance"
   project      = "airline1-sabre-wolverine"
   num_nodes    = 2
   
