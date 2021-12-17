@@ -5,23 +5,19 @@ provider "google" {
 }
 
 resource "google_spanner_instance" "example" {
-  config       = "asia-south1"
-  name         = "dev-abcd-fghi-spanner2-instance"
+  config       = "nam3"
+  name         = "wf-us-prod-spn-app01-res01"
   display_name = "cloud spanner2-instance"
   project      = "airline1-sabre-wolverine"
   num_nodes    = 2
 
   labels = {
-    env                  = "default"
     application_division = "pci",
-    #application_name     = "demo",
+    application_name     = "demo",
     application_role     = "app",
     au                   = "0223092",
     created              = "20211122",
-    data_compliance      = "pci",
-    data_confidentiality = "pub",
-    data_type            = "test",
-    environment          = "dev",
+    environment          = "nonprod",
     gcp_region           = "us",
     owner                = "hybridenv",
   }
